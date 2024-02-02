@@ -1,4 +1,6 @@
 EJERCICIOS TRABAJO COMPARTIDO
 MARÍA: 
-	EjercicioS con volúmenes Docker:
-	Crear volumen Docker llamado "miweb":
+	Ejercicios con volúmenes Docker:
+	Crear volumen Docker llamado "miweb": docker volume create miweb
+	![image-20240202093329703](/home/linux/snap/typora/86/.config/Typora/typora-user-images/image-20240202093329703.png)
+
