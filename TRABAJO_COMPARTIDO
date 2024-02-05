@@ -14,13 +14,13 @@
 
   `docker volume create miweb`	
 
-  ![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202093329703.png)
+  ![image-20240202093329703](./typora-user-images/image-20240202093329703.png)
 
 - Crear contenedor desde la imagen php:7.4-apache, montando el volumen en /var/www/html:
 
   `docker run -d -p 8080:80 --name miweb-container -v miweb:/var/www/html php:7.4-apache`
 
-​	![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202093559362.png)
+​	![image-20240202093559362.png](./typora-user-images/image-20240202093559362.png)
 
 
 
@@ -30,26 +30,26 @@
 
   
 
-  ![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202100625090.png)
+  ![image-20240202100625090.png](./typora-user-images/image-20240202100625090.png)
 
 - Accede al contenedor desde el navegador para ver la información ofrecida por el fichero index.html .
 
-  ![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202100458069.png)
+  ![image-20240202100458069.png](./typora-user-images/image-20240202100458069.png)
 
 - Borra el contenedor
 
   `docker stop miweb-container`
   `docker rm miweb-container`
 
-  ![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202100744375.png)
+  ![image-20240202100744375.png](./typora-user-images/image-20240202100744375.png)
 
 - Crea un nuevo contenedor y monta el mismo volumen como en el ejercicio anterior.
 
   `docker run -d --name miweb-container2 -v miwebMaria:/var/www/html -p 8081:80 php:7.4-apache`
 
-  ![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202100809966.png)
+  ![image-20240202100809966.png](./typora-user-images/image-20240202100809966.png)
 
 - Accede al contenedor desde el navegador para ver la información ofrecida por el fichero
   index.html . ¿Seguía existiendo ese fichero?
 
-![](/home/linux/Escritorio/Maria-Raquel-main/Maria-Raquel/typora-user-images/image-20240202100926668.png)
+![image-20240202100926668.png](./typora-user-images/image-20240202100926668.png)
