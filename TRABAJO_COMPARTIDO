@@ -53,3 +53,47 @@
   index.html . ¿Seguía existiendo ese fichero?
 
 ![image-20240202100926668.png](./typora-user-images/image-20240202100926668.png)
+
+
+
+## Ejercicios con bind mount(Raquel):
+
+1. Crea un directorio en tu host y dentro crea un fichero index.html .
+
+   ![image-20240205091840974](./typora-user-images/image-20240205091840974.png)
+
+2. Crea un contenedor desde la imagen php:7.4-apache donde montes en el directorio
+   /var/www/html el directorio que has creado por medio de bind mount .
+
+   ![image-20240205092148184](./typora-user-images/image-20240205092148184.png)
+
+3. Accede al contenedor desde el navegador para ver la información ofrecida por el fichero
+   index.html .
+
+   ![image-20240205092238296](./typora-user-images/image-20240205092238296.png)
+
+4. Modifica el contenido del fichero index.html en tu host y comprueba que al refrescar la
+   página ofrecida por el contenedor, el contenido ha cambiado.
+
+   ![image-20240205092637737](./typora-user-images/image-20240205092637737.png)
+
+   ![image-20240205092703625](./typora-user-images/image-20240205092703625.png)
+
+   
+
+5. Borra el contenedor
+
+   ![image-20240205092807345](./typora-user-images/image-20240205092807345.png)
+
+   
+
+6. Crea un nuevo contenedor y monta el mismo directorio como en el ejercicio anterior.
+
+   ![image-20240205092851257](./typora-user-images/image-20240205092851257.png)
+
+7. Accede al contenedor desde el navegador para ver la información ofrecida por el fichero
+   index.html . ¿Se sigue viendo el mismo contenido?
+
+Si.
+
+![image-20240205092932520](./typora-user-images/image-20240205092932520.png)
