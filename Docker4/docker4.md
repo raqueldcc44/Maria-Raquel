@@ -1,13 +1,27 @@
-EJEMPLOS REDES DOCKER
+# 4 - Redes en Docker
 
+> Raque Cabezas
+>
+> María Clemente
+>
+> Despliegue de Aplicaciones
 
+## Ejemplo 1: Despliegue de la aplicación Guestbook
 
-EJEMPLO3:DESPLIEGUE DE WORDPRESS + MARIADB
+**Crear una red Docker:**
 
-Creo una red personalizada:
+`$ docker network create red_guestbook`
 
-![image-20240209092706255](/home/linux/snap/typora/86/.config/Typora/typora-user-images/image-20240209092706255.png)
+![](/home/linux/Escritorio/Maria-Raquel/Docker4/ejemplo1-Maria/img/image-20240209092205101.png)
 
-Creo el contenedor de mariadb:
+**Ejecutar el contenedor de Redis:**
 
-![image-20240209092818718](/home/linux/snap/typora/86/.config/Typora/typora-user-images/image-20240209092818718.png)
+`$ docker run -d --name redis --network red_guestbook redis`
+
+![](/home/linux/Escritorio/Maria-Raquel/Docker4/ejemplo1-Maria/img/image-20240209092205101.png)
+
+**Ejecutar el contenedor de GuestBook:**
+
+`$ docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook`
+
+![](/home/linux/Escritorio/Maria-Raquel/Docker4/ejemplo1-Maria/img/image-20240209092621746.png)
