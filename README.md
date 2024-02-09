@@ -32,3 +32,17 @@ Docker4
 
 ![](./Docker4/ejemplo1-Maria/img/image-20240209092621746.png)
 
+## Ejemplo 2: Despliegue de la aplicación "Temperaturas"
+
+**Red para conectar los dos contenedores:**
+
+`$ docker network create red_temperaturas`
+
+![](./Docker4/ejemplo2-Maria/img/image-20240209095055601.png)
+
+**Ejecutar los contenedores:**
+`$ docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend`
+
+![](./Docker4/ejemplo2-Maria/img/image-20240209095055601.png)
+
+`$ docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend`
